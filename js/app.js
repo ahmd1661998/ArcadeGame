@@ -7,6 +7,9 @@ var Enemy = function() {
     // x pos
     // y pos
 
+    this.x = 0;
+    this.y = 0;
+    
 
     // The image/sprite for our enemies, this uses ========Delete
     // a helper we've provided to easily load images ========Delete
@@ -60,6 +63,61 @@ Enemy.prototype.render = function() {
             
             // Reset Hero
                 // Set x nd y to starting x and y
+
+//PlayerClass
+class Hero {
+
+    //constructor
+    constructor() {
+        //properties => add X coord, Y coord, sprite image
+        this.sprite = 'images/char-boy.png';
+        this.step = 101;
+        this.jump = 83;
+        this.startX = this.step * 2;
+        this.startY = (this.jump * 5) -20;
+        this.x = this.startX;
+        this.y = this.startY;
+    }
+
+    // Draw player spirte on current x and y coord position
+    render() {
+        ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+    }
+
+    /**
+     * Update her's a and y proberty according to input
+     * 
+     * @param {srtring} input - Direction to travel
+     */
+
+    handleInput(input) {
+        switch(input) {
+            case 'left':
+                if (this.x > 0) {
+                    this.x -= this.step;
+                }
+                break;
+            case 'up':
+                if (this.y > this.jump) {
+                    this.y -= this.jump;
+                }
+                break;
+            case 'right':
+                if (this.x < this.step * 4) {
+                    this.x += this.step;
+                }
+                break;
+            case 'down':
+                if (this.y < this.jump * 4) {
+                    this.y += this.jump;
+                }
+                break;
+        }
+    }
+
+}
+
+const player = new Hero();
 
 
 // Now instantiate your objects. ========Delete
