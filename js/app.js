@@ -2,10 +2,6 @@
 var Enemy = function(x, y, speed) {
     // Variables applied to each of our instances go here, 
     // we've provided one for you to get started 
-
-
-
-
     this.x = x;
     this.y = y + 55;
     this.speed = speed;
@@ -125,25 +121,17 @@ class Hero {
                 this.victory = true;
             }
     }
-
-
-
-
 }
 
+// Now instantiate your objects.
+// Place all enemy objects in an array called allEnemies
+// Place the player object in a variable called player 
 const player = new Hero();
 const bug1 = new Enemy(-101, 0, 200);
 const bug2 = new Enemy(-101, 83, 300);
 const bug3 = new Enemy((-101 * 2.5), 84, 300);
 const allEnemies = [];
 allEnemies.push(bug1, bug2, bug3);
-
-
-// Now instantiate your objects.
-// Place all enemy objects in an array called allEnemies
-// Place the player object in a variable called player 
-
-
 
 // This listens for key presses and sends the keys to your 
 // Player.handleInput() method. You don't need to modify this.

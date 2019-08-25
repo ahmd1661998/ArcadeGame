@@ -65,7 +65,6 @@ var Engine = (function(global) {
 
         lastTime = now;
 
-        
         if (player.victory === true) {
             win.cancelAnimationFrame(id);
             model.classList.toggle('hide');

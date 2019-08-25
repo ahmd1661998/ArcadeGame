@@ -1,20 +1,20 @@
-# Classic Arcade Game Clone Project
+# Arcade Game
+
+This is an arcade game, made for Udacity Frontend Nanodegree project. User can use left, right, up, and down arrow keys to move themself in the board. They need to avoid colliding with the enemies (bugs) and reach the water on the top.
 
 ## Table of Contents
 
 - [Instructions](#instructions)
 - [Contributing](#contributing)
 
-## Instructions
+## Run Locally
 
-Use this [rubric](https://review.udacity.com/#!/rubrics/15/view) for self-checking your submission.
+-Clone this project: https://github.com/ahmd1661998/ArcadeGame
+-cd arcade-game-udacity
+-Open index.html in a browser
 
-Make sure the functions you write are **object-oriented** - either class functions (like `Player` and `Enemy`) or class prototype functions such as `Enemy.prototype.checkCollisions`. Also make sure that the keyword `this` is used appropriately within your class and class prototype functions to refer to the object the function is called upon.
+## Screenshot
 
-Your **README.md** file should be updated with instructions on both how to 1. Run and 2. Play your arcade game.
+[![N|Solid](https://sfdhiw.bn.files.1drv.com/y4mfaD4dDHR2fMNacKERVnBHjWnx3ODuJZj-ytH85N1ILz54wglgJMordkg8LOiwpi-fIZur-IMNQvA1dG-e0pCJ0Zj4K3jLDg7wZSipEOIuyqvdJIw6FuaLfOtO31BX3LObQ5nyjEZ8c_ExIP0TmmlyNKA5Wwor-W5C1W8XqqI-Pddg_n6H6vrSeRgm-E1UvZ6AsaBz4iKdo4QY6HrJeAkug?width=573&height=591&cropmode=none)
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
 
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
