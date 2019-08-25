@@ -1,3 +1,28 @@
 body {
     text-align: center;
 }
+
+.hide {
+    display: none;
+}
+
+.modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-body {
+    position: relative;
+    width: 450px;
+    height: 150px;
+    padding-top: 20px;
+    top: 30%;
+    left: 32%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: #FFF;
+}
