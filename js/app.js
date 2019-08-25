@@ -1,5 +1,5 @@
 // Enemies our player must avoid ========Delete
-var Enemy = function() {
+var Enemy = function(x, y, speed) {
     // Variables applied to each of our instances go here, ========Delete
     // we've provided one for you to get started ========Delete
 
@@ -7,9 +7,12 @@ var Enemy = function() {
     // x pos
     // y pos
 
-    this.x = 0;
-    this.y = 0;
-    
+    this.x = x;
+    this.y = y + 55;
+    this.speed = speed;
+    this.step = 101;
+    this.boundary = this.step * 5;
+    this.resetPos = -this.step;
 
     // The image/sprite for our enemies, this uses ========Delete
     // a helper we've provided to easily load images ========Delete
@@ -24,10 +27,16 @@ Enemy.prototype.update = function(dt) {
     // all computers. ========Delete
 
     //if enemy is not passed boundary
+    if (this.x < this.boundary) {
         // move forward
         // Increment x by peed * dt
-    // else
+        this.x += this.speed * dt;
+    } 
+    else {
         // Reset pos to start
+        this.x = this.resetPos;
+    }
+        
 };
 
 // Draw the enemy on the screen, required method for game ========Delete
@@ -39,47 +48,25 @@ Enemy.prototype.render = function() {
 // This class requires an update(), render() and ========Delete
 // a handleInput() method. ========Delete
 
-// Hero class
-
-    //==> constructor
-
-        //==> properties
-            //==> x pos
-            //==> y pos
-            //==> sprite images
-
-        //==> Methods
-            //==> Update position
-                //==> Check collision here
-                    //==> Did player x and y collide with enemy?
-                //==> Check win here?
-                    //==> Did player x and y reach final tile?
-
-            // Rander 
-                // Draw player spirte on current x and y coord position
-
-            // Handle keyboard input
-                //Update player's x and y property aording to input
-            
-            // Reset Hero
-                // Set x nd y to starting x and y
-
-//PlayerClass
+// heroClass
 class Hero {
 
-    //constructor
+    //==> constructor
     constructor() {
         //properties => add X coord, Y coord, sprite image
         this.sprite = 'images/char-boy.png';
         this.step = 101;
         this.jump = 83;
         this.startX = this.step * 2;
-        this.startY = (this.jump * 5) -20;
+        this.startY = (this.jump * 4) + 55;
         this.x = this.startX;
         this.y = this.startY;
+        this.victory = false;
     }
 
-    // Draw player spirte on current x and y coord position
+    //==> Methods
+
+    //Rander => Draw player spirte on current x and y coord position
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
@@ -90,6 +77,7 @@ class Hero {
      * @param {srtring} input - Direction to travel
      */
 
+    //Handle keyboard input => Update player's x and y property aording to input
     handleInput(input) {
         switch(input) {
             case 'left':
@@ -115,9 +103,41 @@ class Hero {
         }
     }
 
+    //Reset Hero
+    reset() {
+        // Set x nd y to starting x and y
+        this.y = this.startY;
+        this.x = this.startX;
+    }
+
+    //Update position
+    update() {
+        //Check collision here
+        for (let enemy of allEnemies) {
+            // Did player x and y collide with enemy?
+            if (this.y === enemy.y && (enemy.x + enemy.step/2 > this.x && enemy.x < this.x + this.step/2)) {
+                this.reset();
+            }
+        }
+            
+        //==> Check win here?
+            //==> Did player x and y reach final tile?
+            if (this.y === 55) {
+                this.victory = true;
+            }
+    }
+
+
+
+
 }
 
 const player = new Hero();
+const bug1 = new Enemy(-101, 0, 200);
+const bug2 = new Enemy(-101, 83, 300);
+const bug3 = new Enemy((-101 * 2.5), 84, 300);
+const allEnemies = [];
+allEnemies.push(bug1, bug2, bug3);
 
 
 // Now instantiate your objects. ========Delete
