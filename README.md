@@ -15,6 +15,6 @@ This is an arcade game, made for Udacity Frontend Nanodegree project. User can u
 
 ## Screenshot
 
-[![N|Solid](https://sfdhiw.bn.files.1drv.com/y4mfaD4dDHR2fMNacKERVnBHjWnx3ODuJZj-ytH85N1ILz54wglgJMordkg8LOiwpi-fIZur-IMNQvA1dG-e0pCJ0Zj4K3jLDg7wZSipEOIuyqvdJIw6FuaLfOtO31BX3LObQ5nyjEZ8c_ExIP0TmmlyNKA5Wwor-W5C1W8XqqI-Pddg_n6H6vrSeRgm-E1UvZ6AsaBz4iKdo4QY6HrJeAkug?width=573&height=591&cropmode=none)
+![N|Solid](https://sfdhiw.bn.files.1drv.com/y4mfaD4dDHR2fMNacKERVnBHjWnx3ODuJZj-ytH85N1ILz54wglgJMordkg8LOiwpi-fIZur-IMNQvA1dG-e0pCJ0Zj4K3jLDg7wZSipEOIuyqvdJIw6FuaLfOtO31BX3LObQ5nyjEZ8c_ExIP0TmmlyNKA5Wwor-W5C1W8XqqI-Pddg_n6H6vrSeRgm-E1UvZ6AsaBz4iKdo4QY6HrJeAkug?width=573&height=591&cropmode=none)
 
 
