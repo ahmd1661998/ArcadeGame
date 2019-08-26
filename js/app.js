@@ -61,6 +61,23 @@ class Hero {
 
     //==> Methods
 
+    //Update position
+    update() {
+        //Check collision here
+        for (let enemy of allEnemies) {
+            // Did player x and y collide with enemy?
+            if (this.y === enemy.y && (enemy.x + enemy.step/2 > this.x && enemy.x < this.x + this.step/2)) {
+                this.reset();
+            }
+        }
+            
+        //==> Check win here?
+            //==> Did player x and y reach final tile?
+            if (this.y === 55) {
+                this.victory = true;
+            }
+    }
+
     //Rander => Draw player spirte on current x and y coord position
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
@@ -103,23 +120,6 @@ class Hero {
         // Set x nd y to starting x and y
         this.y = this.startY;
         this.x = this.startX;
-    }
-
-    //Update position
-    update() {
-        //Check collision here
-        for (let enemy of allEnemies) {
-            // Did player x and y collide with enemy?
-            if (this.y === enemy.y && (enemy.x + enemy.step/2 > this.x && enemy.x < this.x + this.step/2)) {
-                this.reset();
-            }
-        }
-            
-        //==> Check win here?
-            //==> Did player x and y reach final tile?
-            if (this.y === 55) {
-                this.victory = true;
-            }
     }
 }
 
