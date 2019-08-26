@@ -127,9 +127,9 @@ class Hero {
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player 
 const player = new Hero();
-const bug1 = new Enemy(-101, 0, 200);
+const bug1 = new Enemy(-101, 0, 200);     
 const bug2 = new Enemy(-101, 83, 300);
-const bug3 = new Enemy((-101 * 2.5), 84, 300);
+const bug3 = new Enemy((-101 * 2.5), 83, 300);
 const allEnemies = [];
 allEnemies.push(bug1, bug2, bug3);
 
