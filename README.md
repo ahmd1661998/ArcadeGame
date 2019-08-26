@@ -9,9 +9,9 @@ This is an arcade game, made for Udacity Frontend Nanodegree project. User can u
 
 ## Run Locally
 
--Clone this project: https://github.com/ahmd1661998/ArcadeGame
--cd arcade-game-udacity
--Open index.html in a browser
+- Clone this project: https://github.com/ahmd1661998/ArcadeGame
+- cd arcade-game-udacity
+- Open index.html in a browser
 
 ## Screenshot
 
